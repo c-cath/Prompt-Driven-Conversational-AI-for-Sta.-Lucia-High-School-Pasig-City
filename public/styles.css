@@ -1,0 +1,274 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    background: url('background.jpg') no-repeat center center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.page-header {
+    background-color: rgba(11, 23, 49, 0.9);
+    color: white;
+    text-align: right; /* Align text to the right */
+    padding: 15px 30px;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header-text {
+    font-size: 14px; /* Adjust font size as needed */
+    line-height: 1.5; /* Adjust line height as needed */
+}
+
+
+.chat-container {
+    width: 1000px;
+    flex-grow: 1;
+    min-height: 70vh;
+    background: rgba(11, 23, 49, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 80px auto 0 auto;
+    margin-bottom: 50px;
+}
+
+.chat-header {
+    background: linear-gradient(to right, #1e2b3d, #466591);
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-weight: bold;
+    font-style: italic;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0 0 5px rgba(83, 146, 206, 0.7), 0 0 20px rgba(83, 146, 206, 0.5), 0 0 30px rgba(83, 146, 206, 0.1);
+}
+
+.chat-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-logo img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-box {
+    height: 500px;
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-height: 500px;
+    scroll-behavior: smooth;
+}
+
+/* Common message-wrapper styles */
+.message-wrapper {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 15px;
+}
+
+.message-wrapper .avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Bot message styles */
+.message-wrapper.bot-message {
+    justify-content: flex-start; /* Bot messages align left */
+}
+
+.message-wrapper.bot-message .avatar {
+    margin-right: 15px;
+}
+
+.message-wrapper.bot-message .message {
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 70%;
+    word-wrap: break-word;
+    line-height: 1.5;
+    font-size: 14px;
+    background-color: white;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    white-space: pre-wrap;
+}
+
+/* User message styles */
+.message-wrapper.user-message {
+    justify-content: flex-end; /* User messages align right */
+}
+
+.message-wrapper.user-message .message {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 20px;
+    max-width: 70%;
+    word-wrap: break-word;
+    line-height: 1.5;
+    font-size: 14px;
+    background: rgba(201, 238, 255, 0.973);
+    color: black;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    white-space: pre-wrap;
+}
+
+.message-wrapper.bot-message .message ul { /* Target the <ul> inside the message */
+    padding-left: 20px; /* Adjust this value as needed */
+    margin: 5px 0; /* Add some margin for spacing */
+}
+
+.message-wrapper.bot-message .message li { /* Target the <li> inside the message */
+    margin-bottom: 5px; /* Add some space between bullet points */
+}
+
+/* Chat input styles */
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: rgba(83, 146, 206, 0.267);
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(83, 146, 206, 0.7), 0 0 20px rgba(83, 146, 206, 0.5), 0 0 30px rgba(83, 146, 206, 0.3);
+}
+
+.chat-input input:hover {
+    background-color: rgba(255, 255, 255, 0.829);
+}
+
+.chat-input button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(to right, #064163, #071324);
+    color: white;
+    cursor: pointer;
+}
+
+.page-footer {
+    background-color: rgba(11, 23, 49, 0.9);
+    color: white;
+    text-align: center;
+    padding: 15px 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 2000px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.footer-logos {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-logo {
+    height: 40px;
+    width: auto;
+}
+
+#typing-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 15px; /* add padding here, if needed */
+    border-radius: 20px; /* add border radius here, if needed */
+    background-color: white; /* add background color here, if needed */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* add box shadow here, if needed */
+}
+
+#typing-indicator .dot {
+    font-size: 1.5em;
+    animation: typing 1.5s infinite;
+    
+}
+
+#typing-indicator .dot:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+#typing-indicator .dot:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes typing {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
