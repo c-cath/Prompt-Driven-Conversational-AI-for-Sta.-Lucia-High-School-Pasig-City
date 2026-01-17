@@ -20,3 +20,9 @@ Features
    
 
 <img width="1040" height="682" alt="Screenshot 2025-05-02 222836" src="https://github.com/user-attachments/assets/7920397a-693f-4ce5-b3b0-4e89a3583f3c" />
+
+<img width="1038" height="682" alt="Screenshot 2025-05-02 222751" src="https://github.com/user-attachments/assets/bf43e333-211f-4259-8321-f8b793d0f5b5" />
+
+<img width="1043" height="690" alt="Screenshot 2025-05-02 210120" src="https://github.com/user-attachments/assets/c1307bed-1ea4-4516-b6e3-ab5a01a5f80a" />
+
+
