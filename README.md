@@ -17,4 +17,6 @@ Features
 7. Extracurricular activities
 8. School events and announcements
 
+   
+
 <img width="1040" height="682" alt="Screenshot 2025-05-02 222836" src="https://github.com/user-attachments/assets/7920397a-693f-4ce5-b3b0-4e89a3583f3c" />
